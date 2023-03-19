@@ -21,6 +21,8 @@ public class Post {
     private String description;
     private String content;
 
+    private Integer maximumOfComments;
+
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Set<Comment> comments;
 }

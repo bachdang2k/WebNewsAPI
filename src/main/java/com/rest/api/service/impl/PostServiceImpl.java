@@ -38,6 +38,7 @@ public class PostServiceImpl implements PostService {
         post.setTitle(postDTO.getTitle());
         post.setDescription(postDTO.getDescription());
         post.setContent(postDTO.getContent());
+        post.setMaximumOfComments(postDTO.getMaximumOfComments());
 
         Post savedPost = postRepository.save(post);
         return Mapper.toPostResponseDTO(savedPost);

@@ -25,7 +25,8 @@ public class Mapper {
         postResponseDTO.setTitle(post.getTitle());
         postResponseDTO.setDescription(post.getDescription());
         postResponseDTO.setContent(post.getContent());
-        if (post.getComments().size() > 0){
+        postResponseDTO.setMaximumOfComments(post.getMaximumOfComments());
+        if (post.getComments() != null && post.getComments().size() > 0){
             postResponseDTO.setComments(post.getComments().stream().map(Mapper::toCommentResponseDTO).collect(Collectors.toSet()));
         }
         return postResponseDTO;

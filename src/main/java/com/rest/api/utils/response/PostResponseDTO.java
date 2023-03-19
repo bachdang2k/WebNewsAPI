@@ -11,5 +11,6 @@ public class PostResponseDTO {
     private String title;
     private String description;
     private String content;
+    private Integer maximumOfComments;
     private Set<CommentResponseDTO> comments;
 }
