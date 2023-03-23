@@ -1,5 +1,6 @@
 package com.rest.api.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,6 +21,7 @@ public class Comment {
     private String body;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
     @JoinColumn(name = "post_id")
     private Post post;
 }
